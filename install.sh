@@ -17,8 +17,8 @@ do
 			sleep 5
 			sudo apt update -y && sudo apt upgrade -y && sudo apt install docker-ce docker-ce-cli containerd.io -y
 			sudo systemctl enable docker
-			docker volume create portainer_data
-			sudo docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
+			sudo docker volume create portainer_data
+			sudo docker run -d -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
             break
 			;;
         "Debian")
@@ -33,7 +33,7 @@ do
 			sleep 5
 			sudo apt update -y && sudo apt upgrade -y && sudo apt install docker-ce docker-ce-cli containerd.io -y
 			sudo docker volume create portainer_data
-			sudo docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
+			sudo docker run -d -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
             break
 			;;
         "Quit")
