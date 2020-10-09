@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PS3='What linux flavour do you use, please enter your choice: '
+PS3='What linux flavor do you use, please enter your choice: '
 options=("Ubuntu" "Debian" "Quit")
 select opt in "${options[@]}"
 do
