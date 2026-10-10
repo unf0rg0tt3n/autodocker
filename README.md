@@ -1,5 +1,10 @@
 # autodocker
 Automated docker and portainer install
 
-to use chmod +x install.sh
-./install.sh
+**Note:** The installation script requires root or sudo privileges.
+
+To use:
+```bash
+chmod +x install.sh
+sudo ./install.sh
+```
